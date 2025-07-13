@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Battle Game</title>
+    <link rel="stylesheet" href="CSS.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">🎲 Dice Battle 🎲</h1>
+            <div class="score-board">
+                <div class="player-score">
+                    <span class="player-name">Player 1</span>
+                    <span class="score" id="score1">0</span>
+                </div>
+                <div class="vs">VS</div>
+                <div class="player-score">
+                    <span class="player-name">Player 2</span>
+                    <span class="score" id="score2">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-area">
+            <div class="dice-container">
+                <div class="dice-wrapper">
+                    <div class="player-label">Player 1</div>
+                    <div class="dice" id="dice1">
+                        <img class="dice-img" src="images/dice1.png" alt="Dice 1">
+                    </div>
+                    <div class="dice-value" id="value1">1</div>
+                </div>
+                
+                <div class="dice-wrapper">
+                    <div class="player-label">Player 2</div>
+                    <div class="dice" id="dice2">
+                        <img class="dice-img" src="images/dice1.png" alt="Dice 2">
+                    </div>
+                    <div class="dice-value" id="value2">1</div>
+                </div>
+            </div>
+
+            <div class="result-area">
+                <h2 class="result-text" id="result">Click Roll to Start!</h2>
+                <div class="winner-announcement" id="winner"></div>
+            </div>
+
+            <div class="controls">
+                <button class="roll-btn" id="rollBtn">
+                    <i class="fas fa-dice"></i>
+                    Roll Dice
+                </button>
+                <button class="reset-btn" id="resetBtn">
+                    <i class="fas fa-redo"></i>
+                    Reset Game
+                </button>
+            </div>
+
+            <div class="game-stats">
+                <div class="stat-item">
+                    <span class="stat-label">Total Rolls:</span>
+                    <span class="stat-value" id="totalRolls">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Ties:</span>
+                    <span class="stat-value" id="totalTies">0</span>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>🎮 Enhanced Dice Battle Game © 2025</p>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <div class="confetti-container" id="confetti"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
